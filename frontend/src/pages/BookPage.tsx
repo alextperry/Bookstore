@@ -16,7 +16,6 @@ function ProjectPage() {
 
         <div className="row">
           <div className="col-md-3">
-            <div className='card p-3'>
             <CategoryFilter
               selectedCategories={selectedCategories}
               setSelectedCategories={setSelectedCategories}
@@ -25,10 +24,8 @@ function ProjectPage() {
           <div className="col-md-9">
             <BookList selectedCategories={selectedCategories} />
           </div>
-          </div>
         </div>
       </div>
-
     </>
   );
 }
