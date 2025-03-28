@@ -33,5 +33,16 @@ namespace Bookstore.Controllers
 
             return Ok(newObject);
         }
+
+        [HttpGet("GetProjectTypes")]
+        public IActionResult GetProjectTypes()
+        {
+            var projectTypes = _bookContext.Books
+                .Select(p => p.Category)
+                .Distinct()
+                .ToList();
+
+            return Ok(projectTypes);
+        }
     }
 }
