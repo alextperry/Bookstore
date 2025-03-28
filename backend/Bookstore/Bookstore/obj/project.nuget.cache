@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SpPvA2GA3Uc=",
+  "dgSpecHash": "jzwtFka8IoE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alext_x0p\\OneDrive\\Desktop\\Bookstore\\backend\\Bookstore\\Bookstore\\Bookstore.csproj",
+  "projectFilePath": "C:\\Projects\\Bookstore\\backend\\Bookstore\\Bookstore\\Bookstore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alext_x0p\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\alext_x0p\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

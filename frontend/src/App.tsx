@@ -1,16 +1,16 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import './App.css'
-import BookList from './Booklist'
+import './App.css';
+import BookList from './Booklist';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-  <BookList />
+      <BookList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
