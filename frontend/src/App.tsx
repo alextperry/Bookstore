@@ -4,12 +4,14 @@ import BookPage from './pages/BookPage';
 import PurchasePage from './pages/PurchasePage';
 import CartPage from './pages/CartPage';
 import { CartProvider } from './context/CartContext';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <>
       <CartProvider>
         <Router>
+          <NavBar />
           <Routes>
             <Route path="/" element={<BookPage />} />
             <Route path="/books" element={<BookPage />} />

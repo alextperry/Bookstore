@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { CartItem } from '../types/CartItem';
 import { useState } from 'react';
@@ -6,11 +6,12 @@ import WelcomeHeader from '../components/WelcomeHeader';
 
 function PurchasePage() {
   const navigate = useNavigate();
-  const { title, bookId, price } = useParams();
+  const { title, bookId } = useParams();
   const { addToCart } = useCart();
-  const [donationAmount, setDonationAmount] = useState<number>(
-    Number(price) || 0,
-  );
+  const location = useLocation();
+  const price = location.state?.price || 0;
+  const [donationAmount, setDonationAmount] = useState<number>(Number(price));
+ 
 
   const handleAddToCart = () => {
     const newItem: CartItem = {
@@ -30,7 +31,7 @@ function PurchasePage() {
 
         <div className="form-group">
           <label className="mb-2">
-            <strong>Donation Amount</strong>
+            <strong>Purchase Price</strong>
           </label>
           <input
             type="number"

@@ -25,9 +25,15 @@ function CartPage() {
             </ul>
           )}
         </div>
-        <h3>Total: </h3>
+        <h3>
+          {' '}
+          Total: $
+          {cart
+            .reduce((total, item) => total + item.donationAmount, 0)
+            .toFixed(2)}
+        </h3>
         <button onClick={() => navigate('/cart')}>Checkout</button>
-        <button onClick={() => navigate('/projects')}>Back to Book List</button>
+        <button onClick={() => navigate('/books')}>Back to Book List</button>
       </div>
     </>
   );

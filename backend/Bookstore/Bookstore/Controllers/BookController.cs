@@ -16,14 +16,22 @@ namespace Bookstore.Controllers
         }
 
         [HttpGet("AllProjects")]
-        public IActionResult GetProjects(int pageSize = 5, int pageNum = 1)
+        public IActionResult GetProjects(int pageSize = 5, int pageNum = 1, [FromQuery] List<string>? projectTypes = null)
         {
-            var list = _bookContext.Books
-            .Skip((pageNum - 1) * pageSize)
-            .Take(pageSize)
-            .ToList();
+            var query = _bookContext.Books.AsQueryable();
 
-            var totalNumProjects = _bookContext.Books.Count();
+            // Apply category filtering if projectTypes are provided
+            if (projectTypes != null && projectTypes.Any())
+            {
+                query = query.Where(b => projectTypes.Contains(b.Category));
+            }
+
+            var totalNumProjects = query.Count(); // Count AFTER filtering
+
+            var list = query
+                .Skip((pageNum - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
 
             var newObject = new
             {
@@ -33,6 +41,7 @@ namespace Bookstore.Controllers
 
             return Ok(newObject);
         }
+
 
         [HttpGet("GetProjectTypes")]
         public IActionResult GetProjectTypes()

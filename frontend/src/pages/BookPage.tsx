@@ -2,8 +2,7 @@ import CategoryFilter from '../components/CategoryFilter';
 import BookList from '../components/Booklist';
 import WelcomeHeader from '../components/WelcomeHeader';
 import { useState } from 'react';
-
-// import CartSummary from '../components/CartSummary';
+import CartSummary from '../components/CartSummary';
 
 function ProjectPage() {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -11,7 +10,7 @@ function ProjectPage() {
   return (
     <>
       <div className="container mt-4">
-        {/* <CartSummary /> */}
+        <CartSummary />
         <WelcomeHeader />
 
         <div className="row">
