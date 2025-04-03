@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <Link className="navbar-brand" to="/">
           📚 Book Store
@@ -27,6 +27,11 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link" to="/cart">
                 Cart 🛒
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/adminbooks">
+                Admin
               </Link>
             </li>
           </ul>
