@@ -321,3 +321,4 @@ C:\Projects\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\refint\Bookst
 C:\Projects\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.pdb
 C:\Projects\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\Bookstore.genruntimeconfig.cache
 C:\Projects\Bookstore\backend\Bookstore\Bookstore\obj\Debug\net8.0\ref\Bookstore.dll
+C:\Projects\Bookstore\backend\Bookstore\Bookstore\bin\Debug\net8.0\Bookstore.sqlite
