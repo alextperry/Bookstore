@@ -16,7 +16,7 @@ options.UseSqlite(builder.Configuration.GetConnectionString("BookstoreConnection
 builder.Services.AddCors(options =>
     options.AddPolicy("AllowReactApp",
     policy => {
-        policy.WithOrigins("http://localhost:3000", "https://bookstorebackendperry.azurewebsites.net")
+        policy.WithOrigins("http://localhost:3000", "https://proud-forest-04e3bb11e.6.azurestaticapps.net")
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
