@@ -19,9 +19,6 @@ export const fetchBooks = async (
 
     const response = await fetch(
       `${ApiUrl}/allbooks?pageSize=${pageSize}&pageNum=${pageNum}${selectedCategories.length ? `&${categoryParams}` : ``}`,
-      {
-        credentials: 'include',
-      },
     );
 
     if (!response.ok) {

@@ -7,7 +7,7 @@ import EditBookForm from '../components/EditBookForm';
 
 const AdminBooksPage = () => {
   const [books, setBooks] = useState<Book[]>([]);
-  const [error, setError] = useState<string | null>(null); 
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [pageSize, setPageSize] = useState<number>(10);
   const [pageNum, setPageNum] = useState<number>(1);
